@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rule Engine</h1>
+        
+        <div class="rule-section">
+            <label for="rule">Create Rule:</label>
+            <textarea id="rule" placeholder="Enter rule, e.g., age > 30 AND department = 'Sales'"></textarea>
+            <button id="createRuleBtn">Create Rule</button>
+        </div>
+
+        <div class="output-section">
+            <h2>AST (JSON format)</h2>
+            <pre id="astOutput"></pre>
+        </div>
+
+        <div class="data-section">
+            <h2>Data (JSON format)</h2>
+            <textarea id="data" placeholder='{"age": 35, "department": "Sales", "salary": 60000, "experience": 3}'></textarea>
+            <button id="evaluateRuleBtn">Evaluate Rule</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Result</h2>
+            <pre id="resultOutput"></pre>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
